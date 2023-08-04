@@ -1,0 +1,39 @@
+/* Boyd */
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+/* Header */
+
+.navbar {
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: fit-content;
+}
+
+.navbar a {
+    color: white;
+}
+
+/* End of Header */
+
+/* Main */
+
+/* First Section */
+.section1 {
+    height: fit-content;
+    width: 100%;
+}
+
+.section1 video {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* End of Section */

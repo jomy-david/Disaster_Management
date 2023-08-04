@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person</title>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/stylesPerson.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Header Section -->
+
+    <header>
+        <nav class="navbar navbar-expand">
+            <!-- <a href="./" style="padding-left: 25px;" class="navbar-brand col-4">Brand</a>  -->
+        
+            <ul class="navbar-nav row">
+                <li class="nav-item col"><a class="nav-link" href="./">Home</a></li>
+                <li class="nav-item col"><a class="nav-link" href="Camp">Camp</a></li>
+                <li class="nav-item col"><a class="nav-link" href="Person">Person</a></li>
+                <li class="nav-item col"><a class="nav-link" href="Requirements">Requirements</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- End Of Header Section -->
+
+<!-- Main Section -->
+
+<main class="container">
+    <form method="post">
+        <table>
+            <tr>
+            <td>Name : </td>
+            <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Age  :</td>
+                <td><input type="number" name="age"></td>
+            </tr>
+            <tr>
+                <td>Camp ID :</td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td>Contact :</td>
+                <td><input type="text" name="ph"></td>
+            </tr>
+            <tr>
+                <td>Gender : </td>
+                <td id="gender">Male<input type="radio" name="gen" value="male">&emsp; Female<input type="radio" name="gen" value="female"></td>
+            </tr>
+            <tr style="height: 50px;"></tr>
+        </table>
+        <input class="btn btn-primary" type="submit" value="SUBMIT">
+    </form>
+</main>
