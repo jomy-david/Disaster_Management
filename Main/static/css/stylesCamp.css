@@ -22,7 +22,6 @@ body {
     top: 0px;
 }
 
-
 .navbar a {
     color: white;
 }
@@ -32,28 +31,35 @@ body {
 /* Main */
 
 main {
-    height: 85vh;
-    align-items: center;
-    display: grid;
-    justify-content: center;
-    text-align: center;
-}
-
-form {
     margin-top: 50px;
-    border: 1px solid blue;
-    padding-top: 25px;
-    padding-bottom: 25px;
+}
+
+/* Camp Section */
+
+.camp {
+    margin-top: 15vh;
+    height: fit-content;
+    padding: 10px;
+}
+
+.campContain {
+    padding: 0px;
+    margin: 0px;
+    width: calc(100%/3);
+    height: fit-content;
     border-radius: 25px;
-}
-
-td {
-
-    text-align: right;
-    padding: 20px;
-}
-
-#gender {
+    overflow: hidden;
     text-align: center;
-    tab-size: 8;
+    background-color: rgba(85, 179, 196, 0.603);
+}
+
+.campContain img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.campContain font {
+    color: black;
+    font-family: Handjet;
+    font-size: 24px;
 }

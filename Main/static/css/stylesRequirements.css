@@ -1,24 +1,27 @@
-/* Boyd */
+/* Body */
+
+@font-face {
+    font-family: Handjet;
+    src: url('fonts/Handjet/Handjet-ExtraBold.ttf');
+}
 
 body {
     overflow-x: hidden;
+    background-color: rgba(0, 153, 158, 0.205);
 
 }
-
-
 
 /* Header */
 
 .navbar {
     width: 100%;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: fit-content;
+    background-color: rgb(85, 179, 196);
+    height: 50px;
+    position: fixed;
+    top: 0px;
 }
 
-.navbar a {
-    color: white;
-}
 
 /* End of Header */
 
