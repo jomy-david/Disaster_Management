@@ -9,6 +9,8 @@ def camp(request):
     return render(request,'Camp.html')
 
 def person(request):
+    if request.POST:
+        pass
     return render(request,'Person.html')
 
 def requirements(request):
