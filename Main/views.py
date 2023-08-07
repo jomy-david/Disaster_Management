@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Person
+from .models import Person,Camp
 from django.http import HttpResponseRedirect
 
 # Create your views here.
@@ -8,7 +8,8 @@ def home(request):
     return render(request,'Home.html')
 
 def camp(request):
-    return render(request,'Camp.html')
+    obj = Camp.objects.all()
+    return render(request,'Camp.html',{"obj":obj})
 
 def person(request):
     if request.POST:

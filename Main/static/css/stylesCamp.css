@@ -16,22 +16,7 @@ body {
 
 }
 
-/* Header */
 
-.navbar {
-    width: 100%;
-    justify-content: center;
-    background-color: rgb(85, 179, 196);
-    height: 50px;
-    position: fixed;
-    top: 0px;
-}
-
-.navbar a {
-    color: white;
-}
-
-/* End of Header */
 
 /* Main */
 
@@ -42,25 +27,38 @@ main {
 /* Camp Section */
 
 .camp {
-    margin-top: 15vh;
+    align-items: center;
+    margin-top: 5em;
     height: fit-content;
-    padding: 10px;
+    padding: 3em;
+    display: grid;
+    grid-gap: 5em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
 }
 
 .campContain {
     padding: 0px;
     margin: 0px;
-    width: calc(100%/3);
-    height: fit-content;
+    width: 300px;
+    height: 200px;
     border-radius: 25px;
     overflow: hidden;
     text-align: center;
     background-color: rgba(85, 179, 196, 0.603);
+    box-shadow: 0px 0px 35px rgb(0, 0, 0);
+    transition: box-shadow 1s;
+}
+
+.campContain:hover {
+    box-shadow: 0px 0px 50px rgb(12, 39, 88);
 }
 
 .campContain img {
-    max-width: 100%;
+    min-width: 100%;
     object-fit: cover;
+    max-width: 100%;
+    height: 160px;
 }
 
 .campContain font {

@@ -11,19 +11,6 @@ body {
 
 }
 
-/* Header */
-
-.navbar {
-    width: 100%;
-    justify-content: center;
-    background-color: rgb(85, 179, 196);
-    height: 50px;
-    position: fixed;
-    top: 0px;
-}
-
-
-/* End of Header */
 
 /* Main */
 

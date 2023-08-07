@@ -1,0 +1,29 @@
+/* Header */
+
+.navbar {
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(85, 179, 196);
+    height: 50px;
+    position: fixed;
+    top: 0px;
+}
+
+.navbar span {
+    color: white;
+    position: absolute;
+    left: 20px;
+    text-decoration: none;
+}
+
+.navbar a {
+    color: white;
+}
+
+@media (max-width:700px) {
+    .navbar span {
+        display: none;
+    }
+}
+
+/* End of Header */
