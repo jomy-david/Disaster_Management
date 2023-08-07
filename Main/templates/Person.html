@@ -28,29 +28,33 @@
 
 <main class="container">
     <form method="post">
+        {% csrf_token %}
         <table>
             <tr>
             <td>Name : </td>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="name" required></td>
             </tr>
             <tr>
                 <td>Age  :</td>
-                <td><input type="number" name="age"></td>
+                <td><input type="number" name="age" maxlength="3" required></td>
             </tr>
             <tr>
                 <td>Camp ID :</td>
-                <td><input type="text" name="id"></td>
+                <td><input type="text" name="id" maxlength="3" required><p>{{Error}}</p></td>       
+                
             </tr>
+           
             <tr>
                 <td>Contact :</td>
-                <td><input type="text" name="ph"></td>
+                <td><input type="text" name="ph" maxlength="10" required></td>
+                
             </tr>
             <tr>
                 <td>Gender : </td>
-                <td id="gender">Male<input type="radio" name="gen" value="male">&emsp; Female<input type="radio" name="gen" value="female"></td>
+                <td id="gender">Male<input type="radio" name="gen" value="male" required>&emsp; Female<input type="radio" name="gen" value="female" required></td>
             </tr>
             <tr style="height: 50px;"></tr>
         </table>
-        <input class="btn btn-primary" type="submit" value="SUBMIT">
+        <input class="btn btn-primary" type="submit" value="ADD PERSON">
     </form>
 </main>

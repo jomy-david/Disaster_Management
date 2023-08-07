@@ -5,6 +5,8 @@
     src: url('fonts/Handjet/Handjet-ExtraBold.ttf');
 }
 
+
+
 body {
     overflow-x: hidden;
     background-color: rgba(0, 153, 158, 0.205);
@@ -45,10 +47,11 @@ form {
     padding-top: 25px;
     padding-bottom: 25px;
     border-radius: 25px;
+
 }
 
 td {
-
+    position: relative;
     text-align: right;
     padding: 20px;
 }
@@ -56,4 +59,9 @@ td {
 #gender {
     text-align: center;
     tab-size: 8;
+}
+
+p {
+    position: absolute;
+    left: 100px;
 }

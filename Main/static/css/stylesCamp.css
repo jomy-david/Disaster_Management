@@ -5,6 +5,11 @@
     src: url('fonts/Handjet/Handjet-ExtraBold.ttf');
 }
 
+@font-face {
+    font-family: Quicksand;
+    src: url('fonts/Quicksand/Quicksand-Bold.ttf');
+}
+
 body {
     overflow-x: hidden;
     background-color: rgba(0, 153, 158, 0.205);
@@ -60,6 +65,6 @@ main {
 
 .campContain font {
     color: black;
-    font-family: Handjet;
+    font-family: Quicksand;
     font-size: 24px;
 }
