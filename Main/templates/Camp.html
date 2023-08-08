@@ -31,14 +31,14 @@
     <section class="camp container">
         
         {% for i in obj %}
-        <section class="item campContain">
+        <section id="{{i.camp_name}}" class="item campContain">
             <article>
-                <img src="media/{{i.camp_img}}" onclick="show('{{i.camp_id}}')">
+                <img src="media/{{i.camp_img}}" onclick="show('{{i.camp_id}}','{{i.camp_name}}')">
             </article>
-            <article class="title" onclick="show('{{i.camp_id}}')"><font>{{i.camp_name}}</font></article>
+            <article class="title" onclick="show('{{i.camp_id}}','{{i.camp_name}}')"><font>{{i.camp_name}}</font></article>
         </section>
         <section id="{{i.camp_id}}" class="item data1">
-            <span><button class="btn" onclick="hide('{{i.camp_id}}')">X</button></span>
+            <span><button class="btn" onclick="hide('{{i.camp_id}}','{{i.camp_name}}')">X</button></span>
         <table class="table1">
             <tr>
                 <td>Camp ID</td>
