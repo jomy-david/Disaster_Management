@@ -36,6 +36,12 @@ def person(request):
     return render(request,'Person.html',{"error":""})
 
 def requirements(request):
+    if request.POST:
+        cid = request.POST.get("id")
+        camp_list = Camp.objects.values_list('camp_id')
+        camp_list = [i[0] for i in camp_list]
+        if cid in camp_list:
+            camp_data = Camp.objects.get(camp_id=cid)
     return render(request,'Requirements.html')
 
 def test(request):

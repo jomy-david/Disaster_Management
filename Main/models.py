@@ -21,5 +21,7 @@ class Camp(models.Model):
     man_contact = models.IntegerField()
     curr_capacity = models.PositiveIntegerField()
     total_capacity = models.PositiveIntegerField()
+    rat_towel = models.PositiveIntegerField()
+    rat_soap = models.PositiveIntegerField()
 
 
