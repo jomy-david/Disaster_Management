@@ -19,4 +19,7 @@ class Camp(models.Model):
     man_id = models.CharField(max_length=5,unique=True)
     camp_img = models.ImageField(upload_to="Camp_Images")
     man_contact = models.IntegerField()
+    curr_capacity = models.PositiveIntegerField()
+    total_capacity = models.PositiveIntegerField()
+
 
