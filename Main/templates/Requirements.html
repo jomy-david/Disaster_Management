@@ -30,6 +30,7 @@
 
 <main class="container">
     <form method="post">
+        {% csrf_token %}
         <table>
                 <td>Camp ID :</td>
                 <td><input type="text" name="id"></td>
@@ -49,5 +50,6 @@
             <tr style="height: 50px;"></tr>
         </table>
         <input class="btn btn-primary" type="submit" value="SUBMIT">
+        {{error}}
     </form>
 </main>

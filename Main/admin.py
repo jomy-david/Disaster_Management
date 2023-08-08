@@ -9,7 +9,7 @@ class adminPerson(admin.ModelAdmin):
     ]
 class adminCamp(admin.ModelAdmin):
     list_display=[
-        'camp_id','camp_name','camp_add','camp_district','camp_state','camp_man','man_contact','curr_capacity','total_capacity'
+        'camp_id','camp_name','camp_add','camp_district','camp_state','camp_man','man_contact','curr_capacity','total_capacity','rat_towel','rat_soap'
     ]
 admin.site.register(Person,adminPerson)
 admin.site.register(Camp,adminCamp)

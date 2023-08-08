@@ -42,7 +42,16 @@ def requirements(request):
         camp_list = [i[0] for i in camp_list]
         if cid in camp_list:
             camp_data = Camp.objects.get(camp_id=cid)
-    return render(request,'Requirements.html')
+            ration = request.POST.get("things")
+            qty = int(request.POST.get("qty"))
+            if ration == "towels":
+                camp_data.rat_towel+=qty
+            else:
+                camp_data.rat_soap+=qty
+            camp_data.save(update_fields=['rat_towel','rat_soap'])
+        else:
+            return render(request,'Requirements.html',{'error':"Invalid Camp ID"})
+    return render(request,'Requirements.html',{"error":""})
 
 def test(request):
     data = Camp.objects.values_list('camp_id')
