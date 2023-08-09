@@ -15,12 +15,8 @@ def camp(request):
     per_camp_list = Person.objects.values_list('camp_id')
     per_camp_list = [i[0] for i in per_camp_list]
     for i in camp_list:
-        s=0
         obj_camp = Camp.objects.get(camp_id=i)
-        for j in per_camp_list:          
-            if j == i:
-                s+=1
-        obj_camp.curr_capacity=s
+        obj_camp.curr_capacity=per_camp_list.count(i)
         obj_camp.save(update_fields=['curr_capacity'])
     return render(request,'Camp.html',{"obj":obj,"data_per":obj_per})
 
