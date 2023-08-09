@@ -79,11 +79,11 @@ main {
     text-align: center;
     width: 100%;
     min-width: fit-content;
-    min-height: fit-content;
+    height: fit-content;
     max-height: 90vh;
     grid-column: span 2;
     grid-auto-flow: row;
-    overflow: hidden;
+    overflow: scroll;
     padding-bottom: 10%;
 }
 

@@ -31,6 +31,8 @@ def person(request):
             camp_data = Camp.objects.get(camp_id=cid)
             if camp_data.curr_capacity<=camp_data.total_capacity:
                 obj.name = request.POST.get("name")
+                if obj.name.isspace():
+                    return render(request,'Person.html',{"error":"Name cannot be empty"})
                 obj.age = request.POST.get("age")
                 obj.contact = request.POST.get("ph")
                 obj.gender = request.POST.get("gen")
@@ -63,4 +65,6 @@ def requirements(request):
 def test(request):
     data = Camp.objects.values_list('camp_id')
     data = [i[0] for i in data]
-    return render(request,'Test.html',{"data":data})
+    name = "  "
+    d = name.isspace()
+    return render(request,'Test.html',{"data":d})

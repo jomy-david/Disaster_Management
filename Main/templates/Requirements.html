@@ -33,11 +33,11 @@
         {% csrf_token %}
         <table>
                 <td>Camp ID :</td>
-                <td><input type="text" name="id"></td>
+                <td><input type="text" name="id" required></td>
             </tr>
             <tr>
                 <td>Requirements :</td>
-                <td id="things"><select name="things">
+                <td id="things"><select name="things" required>
                     <option disabled selected>Choose an Option</option>
                     <option value="towels">Towels</option>
                     <option value="soap">Soap</option>
@@ -45,7 +45,7 @@
             </tr>
             <tr>
                 <td>Qty : </td>
-                <td><input type="text" name="qty"></td>
+                <td><input type="text" name="qty" required></td>
             </tr>
             <tr style="height: 50px;"></tr>
         </table>
