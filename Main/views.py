@@ -9,7 +9,20 @@ def home(request):
 
 def camp(request):
     obj = Camp.objects.all()
-    return render(request,'Camp.html',{"obj":obj})
+    obj_per = Person.objects.all()
+    camp_list = Camp.objects.values_list('camp_id')
+    camp_list = [i[0] for i in camp_list]
+    per_camp_list = Person.objects.values_list('camp_id')
+    per_camp_list = [i[0] for i in per_camp_list]
+    for i in camp_list:
+        s=0
+        obj_camp = Camp.objects.get(camp_id=i)
+        for j in per_camp_list:          
+            if j == i:
+                s+=1
+        obj_camp.curr_capacity=s
+        obj_camp.save(update_fields=['curr_capacity'])
+    return render(request,'Camp.html',{"obj":obj,"data_per":obj_per})
 
 def person(request):
     if request.POST:
@@ -21,12 +34,10 @@ def person(request):
         if cid in camp_list:
             camp_data = Camp.objects.get(camp_id=cid)
             if camp_data.curr_capacity<=camp_data.total_capacity:
-                camp_data.curr_capacity+=1
                 obj.name = request.POST.get("name")
                 obj.age = request.POST.get("age")
                 obj.contact = request.POST.get("ph")
                 obj.gender = request.POST.get("gen")
-                camp_data.save(update_fields=['curr_capacity'])
                 obj.save()
                 return HttpResponseRedirect("Person")
             else:

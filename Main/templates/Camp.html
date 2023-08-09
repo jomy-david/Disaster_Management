@@ -89,6 +89,37 @@
                 <td>:</td>
                 <td>{{i.rat_soap}}</td>
             </tr>
+            <tr>
+                <td></td>
+                <td>Manager Details</td>
+            </tr>
+            <tr>
+                <td>Manager</td>
+                <td>:</td>
+                <td>{{i.camp_man}}</td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td>:</td>
+                <td>{{i.man_contact}}</td>
+            </tr>
+        </table>
+        
+        <table class="table2">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>gender</th>
+            </tr>
+            {% for j in data_per %}
+            {% if j.camp_id == i.camp_id %}
+            <tr>
+                <td>{{j.name}}</td>
+                <td>{{j.age}}</td>
+                <td>{{j.gender}}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
         </table>
         </section>
         {% endfor %}

@@ -79,8 +79,12 @@ main {
     text-align: center;
     width: 100%;
     min-width: fit-content;
-    height: 80vh;
+    min-height: fit-content;
+    max-height: 90vh;
     grid-column: span 2;
+    grid-auto-flow: row;
+    overflow: hidden;
+    padding-bottom: 10%;
 }
 
 
@@ -103,5 +107,21 @@ main {
 }
 
 .table1 td {
+    padding: 5px;
+}
+
+.table2 {
+    color: black;
+    background-color: white;
+    margin-top: 10%;
+}
+
+.table2 th {
+    border: 1px solid black;
+}
+
+.table2 td {
+    font-size: 0.8em;
+    border: 1px solid black;
     padding: 10px;
 }
