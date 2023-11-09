@@ -32,16 +32,16 @@ def person(request):
             if camp_data.curr_capacity<=camp_data.total_capacity:
                 obj.name = request.POST.get("name")
                 if obj.name.isspace():
-                    return render(request,'Person.html',{"error":"Name cannot be empty"})
+                    return render(request,'Person.html',{"error":"*Name cannot be empty"})
                 obj.age = request.POST.get("age")
                 obj.contact = request.POST.get("ph")
                 obj.gender = request.POST.get("gen")
                 obj.save()
                 return HttpResponseRedirect("Person")
             else:
-                return render(request,'Person.html',{"error":"Capacity Full"})
+                return render(request,'Person.html',{"error":"*Capacity Full"})
         else:
-            return render(request,'Person.html',{'error':"Invalid Camp ID"})
+            return render(request,'Person.html',{'error':"*Invalid Camp ID"})
     return render(request,'Person.html',{"error":""})
 
 def requirements(request):
